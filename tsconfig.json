@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "alwaysStrict": true,
+    "target": "esnext",
+    "module": "esnext",
+    "allowJs": false,
+    "declaration": false,
+    "sourceMap": true,
+    "rootDir": "./src",
+    "removeComments": false,
+    "importHelpers": false,
+    "strict": true,
+    "moduleResolution": "node", 
+    "allowSyntheticDefaultImports": false,
+    "experimentalDecorators": true,
+    "emitDecoratorMetadata": true,
+    "preserveConstEnums": true
+  },
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "node_modules"
+  ]
+}

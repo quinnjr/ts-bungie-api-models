@@ -1,0 +1,29 @@
+{
+  "name": "ts-bungie-api-models",
+  "version": "0.0.1",
+  "description": "A collection of Typescript models representing the API exposed by Bungie for use with Destiny/Destiny 2",
+  "main": "src/index.ts",
+  "scripts": {
+    "test": "npx tslint -c tslint.json src/**/*.ts"
+  },
+  "keywords": [
+    "bungie",
+    "destiny",
+    "destiny2",
+    "api",
+    "model",
+    "models",
+    "typescript",
+    "ts"
+  ],
+  "author": "Joseph R. Quinn <quinn.josephr@protonmail.com>",
+  "license": "ISC",
+  "peerDependencies": {
+    "typescript": "^3.0.0"
+  },
+  "devDependencies": {
+    "tsdoc": "0.0.4",
+    "tslint": "^5.12.1",
+    "typescript": "^3.2.2"
+  }
+}

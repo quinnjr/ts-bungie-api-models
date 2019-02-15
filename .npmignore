@@ -1,0 +1,7 @@
+/api
+.editorconfig
+.gitattributes
+.gitignore
+.gitmodules
+tslint.json
+/docs
