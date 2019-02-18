@@ -1,14 +1,6 @@
-/**
- * Bungie.Net API
- * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.
- *
- * OpenAPI spec version: 2.3.3
- * Contact: support@bungie.com
- */
-
 import { MembershipType } from '../../MembershipType';
 import { ResponseReason } from './ResponseReason';
-import { Type } from './Type';
+import { AwaType } from './AwaType';
 import { UserSelection } from './UserSelection';
 
 export interface AuthorizationResult {
@@ -36,7 +28,7 @@ export interface AuthorizationResult {
   /**
    * Advanced Write Action Type from the permission request.
    */
-  type?: Type;
+  type?: AwaType;
   /**
    * MembershipType from the permission request.
    */

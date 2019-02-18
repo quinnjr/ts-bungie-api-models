@@ -1,8 +1,8 @@
 import { DeveloperRole } from './DeveloperRole';
-import { UserInfoCard } from '../User/UserInfoCard';
+import { InfoCard } from '../User/InfoCard';
 
 export interface ApplicationDeveloper {
   role?: DeveloperRole;
   apiEulaVersion?: number;
-  user?: UserInfoCard;
+  user?: InfoCard;
 }

@@ -23,7 +23,7 @@ export interface Property {
   visibleOn?: string;
   datatype?: PropertyDataTypeEnum;
   attributes?: { [key: string]: string; };
-  childProperties?: Array<ModelsContentTypeProperty>;
+  childProperties?: Array<PropertyDataTypeEnum>;
   contentTypeAllowed?: string;
   bindToProperty?: string;
   boundRegex?: string;

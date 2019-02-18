@@ -5,3 +5,4 @@
 .gitmodules
 tslint.json
 /docs
+/bin

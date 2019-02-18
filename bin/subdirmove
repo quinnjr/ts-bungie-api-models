@@ -1,0 +1,13 @@
+#!/usr/bin/env sh
+
+REMOVE = $1
+NAME = $2
+
+echo "Making directory for $NAME..."
+mkdir -p $PWD/$NAME
+echo "Removing $REMOVE prefix..."
+rename $REM '' $PWD/*.ts
+echo "Moving $NAME files into $NAME directory..."
+mv $NAME*.ts $NAME
+
+exit 0

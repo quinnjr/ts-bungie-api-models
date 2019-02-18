@@ -1,5 +1,5 @@
 import { PartnershipType } from '../Partnerships/PartnershipType';
-import { UserInfoCard } from '../User/UserInfoCard';
+import { InfoCard } from '../User/InfoCard';
 
 export interface LiveStatus {
   dateStatusUpdated?: Date;
@@ -10,7 +10,7 @@ export interface LiveStatus {
   thumbnailSmall?: string;
   thumbnailLarge?: string;
   destinyCharacterId?: number;
-  userInfo?: UserInfoCard;
+  userInfo?: InfoCard;
   currentActivityHash?: number;
   dateLastPlayed?: Date;
   dateStreamStarted?: Date;

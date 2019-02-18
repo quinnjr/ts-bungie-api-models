@@ -1,0 +1,892 @@
+(function webpackUniversalModuleDefinition(root, factory) {
+	if(typeof exports === 'object' && typeof module === 'object')
+		module.exports = factory();
+	else if(typeof define === 'function' && define.amd)
+		define([], factory);
+	else if(typeof exports === 'object')
+		exports["tsBungieApiModels"] = factory();
+	else
+		root["tsBungieApiModels"] = factory();
+})(window, function() {
+return /******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = "./index.ts");
+/******/ })
+/************************************************************************/
+/******/ ({
+
+/***/ "./Bungie/Applications/ApplicationScopes.ts":
+/*!**************************************************!*\
+  !*** ./Bungie/Applications/ApplicationScopes.ts ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar ApplicationScopes;\n(function (ApplicationScopes) {\n    ApplicationScopes[ApplicationScopes[\"ReadBasicUserProfile\"] = 1] = \"ReadBasicUserProfile\";\n    ApplicationScopes[ApplicationScopes[\"ReadGroups\"] = 2] = \"ReadGroups\";\n    ApplicationScopes[ApplicationScopes[\"WriteGroups\"] = 4] = \"WriteGroups\";\n    ApplicationScopes[ApplicationScopes[\"AdminGroups\"] = 8] = \"AdminGroups\";\n    ApplicationScopes[ApplicationScopes[\"BnetWrite\"] = 16] = \"BnetWrite\";\n    ApplicationScopes[ApplicationScopes[\"MoveEquipDestinyItems\"] = 32] = \"MoveEquipDestinyItems\";\n    ApplicationScopes[ApplicationScopes[\"ReadDestinyInventoryAndVault\"] = 64] = \"ReadDestinyInventoryAndVault\";\n    ApplicationScopes[ApplicationScopes[\"ReadUserData\"] = 128] = \"ReadUserData\";\n    ApplicationScopes[ApplicationScopes[\"EditUserData\"] = 256] = \"EditUserData\";\n    ApplicationScopes[ApplicationScopes[\"ReadDestinyVendorsAndAdvisors\"] = 512] = \"ReadDestinyVendorsAndAdvisors\";\n    ApplicationScopes[ApplicationScopes[\"ReadAndApplyTokens\"] = 1024] = \"ReadAndApplyTokens\";\n    ApplicationScopes[ApplicationScopes[\"AdvancedWriteActions\"] = 2048] = \"AdvancedWriteActions\";\n})(ApplicationScopes = exports.ApplicationScopes || (exports.ApplicationScopes = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Applications/ApplicationScopes.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Applications/ApplicationStatus.ts":
+/*!**************************************************!*\
+  !*** ./Bungie/Applications/ApplicationStatus.ts ***!
+  \**************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar ApplicationStatus;\n(function (ApplicationStatus) {\n    ApplicationStatus[ApplicationStatus[\"None\"] = 0] = \"None\";\n    ApplicationStatus[ApplicationStatus[\"Private\"] = 1] = \"Private\";\n    ApplicationStatus[ApplicationStatus[\"Public\"] = 2] = \"Public\";\n    ApplicationStatus[ApplicationStatus[\"Disabled\"] = 3] = \"Disabled\";\n    ApplicationStatus[ApplicationStatus[\"Blocked\"] = 4] = \"Blocked\";\n})(ApplicationStatus = exports.ApplicationStatus || (exports.ApplicationStatus = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Applications/ApplicationStatus.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Applications/DeveloperRole.ts":
+/*!**********************************************!*\
+  !*** ./Bungie/Applications/DeveloperRole.ts ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar DeveloperRole;\n(function (DeveloperRole) {\n    DeveloperRole[DeveloperRole[\"None\"] = 0] = \"None\";\n    DeveloperRole[DeveloperRole[\"Owner\"] = 1] = \"Owner\";\n    DeveloperRole[DeveloperRole[\"TeamMember\"] = 2] = \"TeamMember\";\n})(DeveloperRole = exports.DeveloperRole || (exports.DeveloperRole = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Applications/DeveloperRole.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Applications/OAuthApplicationType.ts":
+/*!*****************************************************!*\
+  !*** ./Bungie/Applications/OAuthApplicationType.ts ***!
+  \*****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar OAuthApplicationType;\n(function (OAuthApplicationType) {\n    OAuthApplicationType[OAuthApplicationType[\"None\"] = 0] = \"None\";\n    OAuthApplicationType[OAuthApplicationType[\"Confidential\"] = 1] = \"Confidential\";\n    OAuthApplicationType[OAuthApplicationType[\"Public\"] = 2] = \"Public\";\n})(OAuthApplicationType = exports.OAuthApplicationType || (exports.OAuthApplicationType = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Applications/OAuthApplicationType.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Applications/index.ts":
+/*!**************************************!*\
+  !*** ./Bungie/Applications/index.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./ApplicationScopes */ \"./Bungie/Applications/ApplicationScopes.ts\"));\n__export(__webpack_require__(/*! ./ApplicationStatus */ \"./Bungie/Applications/ApplicationStatus.ts\"));\n__export(__webpack_require__(/*! ./DeveloperRole */ \"./Bungie/Applications/DeveloperRole.ts\"));\n__export(__webpack_require__(/*! ./OAuthApplicationType */ \"./Bungie/Applications/OAuthApplicationType.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Applications/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Community/StatusSort.ts":
+/*!****************************************!*\
+  !*** ./Bungie/Community/StatusSort.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar StatusSort;\n(function (StatusSort) {\n    StatusSort[StatusSort[\"Viewers\"] = 0] = \"Viewers\";\n    StatusSort[StatusSort[\"Trending\"] = 1] = \"Trending\";\n    StatusSort[StatusSort[\"OverallViewers\"] = 2] = \"OverallViewers\";\n    StatusSort[StatusSort[\"Followers\"] = 3] = \"Followers\";\n})(StatusSort = exports.StatusSort || (exports.StatusSort = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Community/StatusSort.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Community/index.ts":
+/*!***********************************!*\
+  !*** ./Bungie/Community/index.ts ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./StatusSort */ \"./Bungie/Community/StatusSort.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Community/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Components/Component/PrivacySetting.ts":
+/*!*******************************************************!*\
+  !*** ./Bungie/Components/Component/PrivacySetting.ts ***!
+  \*******************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n/**\n * A set of flags for reason(s) why the component populated in the way that it did. Inspect the individual flags for the reasons.\n */\nvar PrivacySetting;\n(function (PrivacySetting) {\n    PrivacySetting[PrivacySetting[\"None\"] = 0] = \"None\";\n    PrivacySetting[PrivacySetting[\"Public\"] = 1] = \"Public\";\n    PrivacySetting[PrivacySetting[\"Private\"] = 2] = \"Private\";\n})(PrivacySetting = exports.PrivacySetting || (exports.PrivacySetting = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Components/Component/PrivacySetting.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Components/Component/index.ts":
+/*!**********************************************!*\
+  !*** ./Bungie/Components/Component/index.ts ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./PrivacySetting */ \"./Bungie/Components/Component/PrivacySetting.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Components/Component/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Components/index.ts":
+/*!************************************!*\
+  !*** ./Bungie/Components/index.ts ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./Component */ \"./Bungie/Components/Component/index.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Components/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Content/Models/Content/PropertyDataTypeEnum.ts":
+/*!***************************************************************!*\
+  !*** ./Bungie/Content/Models/Content/PropertyDataTypeEnum.ts ***!
+  \***************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar PropertyDataTypeEnum;\n(function (PropertyDataTypeEnum) {\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"None\"] = 0] = \"None\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"Plaintext\"] = 1] = \"Plaintext\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"Html\"] = 2] = \"Html\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"Dropdown\"] = 3] = \"Dropdown\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"List\"] = 4] = \"List\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"Json\"] = 5] = \"Json\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"Content\"] = 6] = \"Content\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"Representation\"] = 7] = \"Representation\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"Set\"] = 8] = \"Set\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"File\"] = 9] = \"File\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"FolderSet\"] = 10] = \"FolderSet\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"Date\"] = 11] = \"Date\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"MultilinePlaintext\"] = 12] = \"MultilinePlaintext\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"DestinyContent\"] = 13] = \"DestinyContent\";\n    PropertyDataTypeEnum[PropertyDataTypeEnum[\"Color\"] = 14] = \"Color\";\n})(PropertyDataTypeEnum = exports.PropertyDataTypeEnum || (exports.PropertyDataTypeEnum = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Content/Models/Content/PropertyDataTypeEnum.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Content/Models/Content/index.ts":
+/*!************************************************!*\
+  !*** ./Bungie/Content/Models/Content/index.ts ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./PropertyDataTypeEnum */ \"./Bungie/Content/Models/Content/PropertyDataTypeEnum.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Content/Models/Content/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Content/Models/index.ts":
+/*!****************************************!*\
+  !*** ./Bungie/Content/Models/index.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./Content */ \"./Bungie/Content/Models/Content/index.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Content/Models/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Content/index.ts":
+/*!*********************************!*\
+  !*** ./Bungie/Content/index.ts ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./Models */ \"./Bungie/Content/Models/index.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Content/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Exceptions/PlatformErrorCodes.ts":
+/*!*************************************************!*\
+  !*** ./Bungie/Exceptions/PlatformErrorCodes.ts ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar PlatformErrorCodes;\n(function (PlatformErrorCodes) {\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3\"] = 3] = \"NUMBER_3\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_5\"] = 5] = \"NUMBER_5\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_6\"] = 6] = \"NUMBER_6\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_7\"] = 7] = \"NUMBER_7\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_8\"] = 8] = \"NUMBER_8\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_9\"] = 9] = \"NUMBER_9\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_10\"] = 10] = \"NUMBER_10\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_11\"] = 11] = \"NUMBER_11\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_12\"] = 12] = \"NUMBER_12\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_13\"] = 13] = \"NUMBER_13\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_14\"] = 14] = \"NUMBER_14\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_15\"] = 15] = \"NUMBER_15\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_16\"] = 16] = \"NUMBER_16\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_17\"] = 17] = \"NUMBER_17\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_18\"] = 18] = \"NUMBER_18\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_19\"] = 19] = \"NUMBER_19\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_20\"] = 20] = \"NUMBER_20\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_21\"] = 21] = \"NUMBER_21\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_22\"] = 22] = \"NUMBER_22\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_23\"] = 23] = \"NUMBER_23\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_24\"] = 24] = \"NUMBER_24\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_25\"] = 25] = \"NUMBER_25\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_26\"] = 26] = \"NUMBER_26\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_27\"] = 27] = \"NUMBER_27\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_28\"] = 28] = \"NUMBER_28\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_29\"] = 29] = \"NUMBER_29\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_30\"] = 30] = \"NUMBER_30\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_31\"] = 31] = \"NUMBER_31\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_32\"] = 32] = \"NUMBER_32\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_33\"] = 33] = \"NUMBER_33\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_34\"] = 34] = \"NUMBER_34\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_35\"] = 35] = \"NUMBER_35\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_36\"] = 36] = \"NUMBER_36\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_37\"] = 37] = \"NUMBER_37\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_38\"] = 38] = \"NUMBER_38\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_39\"] = 39] = \"NUMBER_39\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_40\"] = 40] = \"NUMBER_40\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_41\"] = 41] = \"NUMBER_41\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_42\"] = 42] = \"NUMBER_42\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_43\"] = 43] = \"NUMBER_43\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_44\"] = 44] = \"NUMBER_44\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_45\"] = 45] = \"NUMBER_45\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_46\"] = 46] = \"NUMBER_46\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_47\"] = 47] = \"NUMBER_47\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_48\"] = 48] = \"NUMBER_48\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_49\"] = 49] = \"NUMBER_49\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_50\"] = 50] = \"NUMBER_50\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_51\"] = 51] = \"NUMBER_51\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_52\"] = 52] = \"NUMBER_52\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_53\"] = 53] = \"NUMBER_53\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_89\"] = 89] = \"NUMBER_89\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_90\"] = 90] = \"NUMBER_90\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_91\"] = 91] = \"NUMBER_91\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_92\"] = 92] = \"NUMBER_92\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_93\"] = 93] = \"NUMBER_93\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_94\"] = 94] = \"NUMBER_94\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_95\"] = 95] = \"NUMBER_95\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_96\"] = 96] = \"NUMBER_96\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_97\"] = 97] = \"NUMBER_97\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_98\"] = 98] = \"NUMBER_98\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_99\"] = 99] = \"NUMBER_99\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_100\"] = 100] = \"NUMBER_100\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_101\"] = 101] = \"NUMBER_101\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_102\"] = 102] = \"NUMBER_102\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_103\"] = 103] = \"NUMBER_103\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_104\"] = 104] = \"NUMBER_104\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_105\"] = 105] = \"NUMBER_105\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_106\"] = 106] = \"NUMBER_106\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_107\"] = 107] = \"NUMBER_107\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_108\"] = 108] = \"NUMBER_108\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_109\"] = 109] = \"NUMBER_109\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_110\"] = 110] = \"NUMBER_110\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_111\"] = 111] = \"NUMBER_111\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_112\"] = 112] = \"NUMBER_112\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_113\"] = 113] = \"NUMBER_113\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_115\"] = 115] = \"NUMBER_115\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_116\"] = 116] = \"NUMBER_116\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_117\"] = 117] = \"NUMBER_117\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_118\"] = 118] = \"NUMBER_118\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_119\"] = 119] = \"NUMBER_119\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_120\"] = 120] = \"NUMBER_120\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_121\"] = 121] = \"NUMBER_121\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_122\"] = 122] = \"NUMBER_122\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_123\"] = 123] = \"NUMBER_123\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_124\"] = 124] = \"NUMBER_124\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_125\"] = 125] = \"NUMBER_125\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_126\"] = 126] = \"NUMBER_126\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_127\"] = 127] = \"NUMBER_127\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_128\"] = 128] = \"NUMBER_128\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_129\"] = 129] = \"NUMBER_129\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_130\"] = 130] = \"NUMBER_130\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_131\"] = 131] = \"NUMBER_131\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_132\"] = 132] = \"NUMBER_132\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_133\"] = 133] = \"NUMBER_133\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_134\"] = 134] = \"NUMBER_134\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_135\"] = 135] = \"NUMBER_135\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_136\"] = 136] = \"NUMBER_136\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_137\"] = 137] = \"NUMBER_137\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_138\"] = 138] = \"NUMBER_138\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_139\"] = 139] = \"NUMBER_139\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_140\"] = 140] = \"NUMBER_140\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_141\"] = 141] = \"NUMBER_141\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_142\"] = 142] = \"NUMBER_142\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_143\"] = 143] = \"NUMBER_143\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_144\"] = 144] = \"NUMBER_144\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_145\"] = 145] = \"NUMBER_145\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_146\"] = 146] = \"NUMBER_146\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_147\"] = 147] = \"NUMBER_147\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_148\"] = 148] = \"NUMBER_148\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_149\"] = 149] = \"NUMBER_149\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_150\"] = 150] = \"NUMBER_150\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_151\"] = 151] = \"NUMBER_151\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_152\"] = 152] = \"NUMBER_152\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_153\"] = 153] = \"NUMBER_153\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_154\"] = 154] = \"NUMBER_154\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_155\"] = 155] = \"NUMBER_155\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_156\"] = 156] = \"NUMBER_156\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_157\"] = 157] = \"NUMBER_157\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_158\"] = 158] = \"NUMBER_158\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_159\"] = 159] = \"NUMBER_159\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_160\"] = 160] = \"NUMBER_160\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_161\"] = 161] = \"NUMBER_161\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_162\"] = 162] = \"NUMBER_162\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_163\"] = 163] = \"NUMBER_163\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_164\"] = 164] = \"NUMBER_164\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_165\"] = 165] = \"NUMBER_165\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_166\"] = 166] = \"NUMBER_166\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_167\"] = 167] = \"NUMBER_167\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_168\"] = 168] = \"NUMBER_168\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_169\"] = 169] = \"NUMBER_169\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_170\"] = 170] = \"NUMBER_170\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_171\"] = 171] = \"NUMBER_171\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_172\"] = 172] = \"NUMBER_172\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_173\"] = 173] = \"NUMBER_173\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_174\"] = 174] = \"NUMBER_174\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_175\"] = 175] = \"NUMBER_175\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_200\"] = 200] = \"NUMBER_200\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_201\"] = 201] = \"NUMBER_201\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_202\"] = 202] = \"NUMBER_202\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_203\"] = 203] = \"NUMBER_203\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_204\"] = 204] = \"NUMBER_204\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_205\"] = 205] = \"NUMBER_205\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_206\"] = 206] = \"NUMBER_206\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_207\"] = 207] = \"NUMBER_207\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_208\"] = 208] = \"NUMBER_208\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_209\"] = 209] = \"NUMBER_209\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_210\"] = 210] = \"NUMBER_210\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_211\"] = 211] = \"NUMBER_211\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_212\"] = 212] = \"NUMBER_212\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_213\"] = 213] = \"NUMBER_213\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_214\"] = 214] = \"NUMBER_214\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_215\"] = 215] = \"NUMBER_215\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_216\"] = 216] = \"NUMBER_216\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_217\"] = 217] = \"NUMBER_217\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_218\"] = 218] = \"NUMBER_218\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_219\"] = 219] = \"NUMBER_219\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_220\"] = 220] = \"NUMBER_220\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_221\"] = 221] = \"NUMBER_221\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_222\"] = 222] = \"NUMBER_222\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_223\"] = 223] = \"NUMBER_223\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_224\"] = 224] = \"NUMBER_224\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_225\"] = 225] = \"NUMBER_225\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_226\"] = 226] = \"NUMBER_226\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_227\"] = 227] = \"NUMBER_227\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_300\"] = 300] = \"NUMBER_300\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_301\"] = 301] = \"NUMBER_301\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_302\"] = 302] = \"NUMBER_302\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_303\"] = 303] = \"NUMBER_303\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_304\"] = 304] = \"NUMBER_304\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_305\"] = 305] = \"NUMBER_305\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_306\"] = 306] = \"NUMBER_306\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_307\"] = 307] = \"NUMBER_307\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_308\"] = 308] = \"NUMBER_308\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_309\"] = 309] = \"NUMBER_309\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_310\"] = 310] = \"NUMBER_310\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_311\"] = 311] = \"NUMBER_311\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_312\"] = 312] = \"NUMBER_312\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_313\"] = 313] = \"NUMBER_313\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_400\"] = 400] = \"NUMBER_400\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_500\"] = 500] = \"NUMBER_500\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_501\"] = 501] = \"NUMBER_501\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_502\"] = 502] = \"NUMBER_502\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_503\"] = 503] = \"NUMBER_503\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_504\"] = 504] = \"NUMBER_504\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_505\"] = 505] = \"NUMBER_505\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_506\"] = 506] = \"NUMBER_506\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_507\"] = 507] = \"NUMBER_507\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_508\"] = 508] = \"NUMBER_508\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_509\"] = 509] = \"NUMBER_509\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_510\"] = 510] = \"NUMBER_510\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_511\"] = 511] = \"NUMBER_511\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_512\"] = 512] = \"NUMBER_512\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_513\"] = 513] = \"NUMBER_513\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_514\"] = 514] = \"NUMBER_514\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_515\"] = 515] = \"NUMBER_515\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_516\"] = 516] = \"NUMBER_516\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_517\"] = 517] = \"NUMBER_517\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_518\"] = 518] = \"NUMBER_518\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_519\"] = 519] = \"NUMBER_519\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_520\"] = 520] = \"NUMBER_520\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_521\"] = 521] = \"NUMBER_521\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_522\"] = 522] = \"NUMBER_522\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_523\"] = 523] = \"NUMBER_523\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_524\"] = 524] = \"NUMBER_524\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_525\"] = 525] = \"NUMBER_525\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_526\"] = 526] = \"NUMBER_526\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_527\"] = 527] = \"NUMBER_527\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_528\"] = 528] = \"NUMBER_528\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_529\"] = 529] = \"NUMBER_529\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_530\"] = 530] = \"NUMBER_530\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_531\"] = 531] = \"NUMBER_531\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_532\"] = 532] = \"NUMBER_532\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_533\"] = 533] = \"NUMBER_533\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_534\"] = 534] = \"NUMBER_534\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_535\"] = 535] = \"NUMBER_535\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_536\"] = 536] = \"NUMBER_536\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_537\"] = 537] = \"NUMBER_537\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_538\"] = 538] = \"NUMBER_538\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_539\"] = 539] = \"NUMBER_539\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_540\"] = 540] = \"NUMBER_540\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_541\"] = 541] = \"NUMBER_541\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_542\"] = 542] = \"NUMBER_542\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_543\"] = 543] = \"NUMBER_543\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_544\"] = 544] = \"NUMBER_544\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_555\"] = 555] = \"NUMBER_555\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_556\"] = 556] = \"NUMBER_556\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_557\"] = 557] = \"NUMBER_557\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_558\"] = 558] = \"NUMBER_558\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_559\"] = 559] = \"NUMBER_559\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_560\"] = 560] = \"NUMBER_560\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_561\"] = 561] = \"NUMBER_561\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_562\"] = 562] = \"NUMBER_562\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_563\"] = 563] = \"NUMBER_563\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_564\"] = 564] = \"NUMBER_564\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_565\"] = 565] = \"NUMBER_565\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_566\"] = 566] = \"NUMBER_566\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_567\"] = 567] = \"NUMBER_567\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_568\"] = 568] = \"NUMBER_568\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_569\"] = 569] = \"NUMBER_569\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_570\"] = 570] = \"NUMBER_570\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_571\"] = 571] = \"NUMBER_571\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_572\"] = 572] = \"NUMBER_572\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_573\"] = 573] = \"NUMBER_573\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_574\"] = 574] = \"NUMBER_574\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_575\"] = 575] = \"NUMBER_575\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_576\"] = 576] = \"NUMBER_576\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_577\"] = 577] = \"NUMBER_577\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_578\"] = 578] = \"NUMBER_578\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_579\"] = 579] = \"NUMBER_579\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_580\"] = 580] = \"NUMBER_580\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_581\"] = 581] = \"NUMBER_581\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_582\"] = 582] = \"NUMBER_582\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_583\"] = 583] = \"NUMBER_583\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_584\"] = 584] = \"NUMBER_584\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_585\"] = 585] = \"NUMBER_585\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_586\"] = 586] = \"NUMBER_586\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_587\"] = 587] = \"NUMBER_587\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_588\"] = 588] = \"NUMBER_588\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_589\"] = 589] = \"NUMBER_589\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_590\"] = 590] = \"NUMBER_590\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_591\"] = 591] = \"NUMBER_591\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_592\"] = 592] = \"NUMBER_592\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_593\"] = 593] = \"NUMBER_593\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_594\"] = 594] = \"NUMBER_594\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_595\"] = 595] = \"NUMBER_595\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_601\"] = 601] = \"NUMBER_601\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_602\"] = 602] = \"NUMBER_602\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_603\"] = 603] = \"NUMBER_603\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_604\"] = 604] = \"NUMBER_604\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_605\"] = 605] = \"NUMBER_605\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_606\"] = 606] = \"NUMBER_606\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_607\"] = 607] = \"NUMBER_607\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_608\"] = 608] = \"NUMBER_608\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_609\"] = 609] = \"NUMBER_609\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_610\"] = 610] = \"NUMBER_610\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_611\"] = 611] = \"NUMBER_611\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_612\"] = 612] = \"NUMBER_612\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_613\"] = 613] = \"NUMBER_613\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_614\"] = 614] = \"NUMBER_614\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_615\"] = 615] = \"NUMBER_615\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_616\"] = 616] = \"NUMBER_616\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_617\"] = 617] = \"NUMBER_617\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_618\"] = 618] = \"NUMBER_618\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_619\"] = 619] = \"NUMBER_619\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_620\"] = 620] = \"NUMBER_620\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_621\"] = 621] = \"NUMBER_621\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_622\"] = 622] = \"NUMBER_622\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_623\"] = 623] = \"NUMBER_623\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_624\"] = 624] = \"NUMBER_624\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_625\"] = 625] = \"NUMBER_625\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_626\"] = 626] = \"NUMBER_626\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_627\"] = 627] = \"NUMBER_627\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_628\"] = 628] = \"NUMBER_628\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_629\"] = 629] = \"NUMBER_629\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_630\"] = 630] = \"NUMBER_630\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_631\"] = 631] = \"NUMBER_631\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_632\"] = 632] = \"NUMBER_632\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_633\"] = 633] = \"NUMBER_633\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_634\"] = 634] = \"NUMBER_634\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_635\"] = 635] = \"NUMBER_635\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_636\"] = 636] = \"NUMBER_636\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_637\"] = 637] = \"NUMBER_637\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_638\"] = 638] = \"NUMBER_638\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_639\"] = 639] = \"NUMBER_639\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_641\"] = 641] = \"NUMBER_641\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_642\"] = 642] = \"NUMBER_642\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_643\"] = 643] = \"NUMBER_643\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_644\"] = 644] = \"NUMBER_644\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_646\"] = 646] = \"NUMBER_646\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_647\"] = 647] = \"NUMBER_647\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_648\"] = 648] = \"NUMBER_648\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_649\"] = 649] = \"NUMBER_649\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_650\"] = 650] = \"NUMBER_650\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_651\"] = 651] = \"NUMBER_651\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_652\"] = 652] = \"NUMBER_652\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_653\"] = 653] = \"NUMBER_653\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_654\"] = 654] = \"NUMBER_654\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_655\"] = 655] = \"NUMBER_655\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_656\"] = 656] = \"NUMBER_656\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_657\"] = 657] = \"NUMBER_657\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_658\"] = 658] = \"NUMBER_658\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_659\"] = 659] = \"NUMBER_659\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_660\"] = 660] = \"NUMBER_660\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_661\"] = 661] = \"NUMBER_661\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_662\"] = 662] = \"NUMBER_662\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_663\"] = 663] = \"NUMBER_663\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_664\"] = 664] = \"NUMBER_664\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_665\"] = 665] = \"NUMBER_665\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_666\"] = 666] = \"NUMBER_666\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_667\"] = 667] = \"NUMBER_667\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_668\"] = 668] = \"NUMBER_668\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_669\"] = 669] = \"NUMBER_669\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_670\"] = 670] = \"NUMBER_670\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_671\"] = 671] = \"NUMBER_671\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_672\"] = 672] = \"NUMBER_672\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_673\"] = 673] = \"NUMBER_673\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_674\"] = 674] = \"NUMBER_674\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_675\"] = 675] = \"NUMBER_675\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_676\"] = 676] = \"NUMBER_676\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_677\"] = 677] = \"NUMBER_677\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_678\"] = 678] = \"NUMBER_678\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_679\"] = 679] = \"NUMBER_679\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_680\"] = 680] = \"NUMBER_680\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_681\"] = 681] = \"NUMBER_681\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_682\"] = 682] = \"NUMBER_682\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_683\"] = 683] = \"NUMBER_683\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_684\"] = 684] = \"NUMBER_684\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_685\"] = 685] = \"NUMBER_685\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_686\"] = 686] = \"NUMBER_686\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_687\"] = 687] = \"NUMBER_687\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_688\"] = 688] = \"NUMBER_688\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_689\"] = 689] = \"NUMBER_689\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_690\"] = 690] = \"NUMBER_690\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_691\"] = 691] = \"NUMBER_691\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_692\"] = 692] = \"NUMBER_692\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_693\"] = 693] = \"NUMBER_693\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_694\"] = 694] = \"NUMBER_694\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_695\"] = 695] = \"NUMBER_695\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_696\"] = 696] = \"NUMBER_696\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_697\"] = 697] = \"NUMBER_697\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_698\"] = 698] = \"NUMBER_698\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_699\"] = 699] = \"NUMBER_699\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_701\"] = 701] = \"NUMBER_701\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_702\"] = 702] = \"NUMBER_702\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_703\"] = 703] = \"NUMBER_703\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_704\"] = 704] = \"NUMBER_704\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_705\"] = 705] = \"NUMBER_705\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_706\"] = 706] = \"NUMBER_706\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_707\"] = 707] = \"NUMBER_707\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_750\"] = 750] = \"NUMBER_750\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_801\"] = 801] = \"NUMBER_801\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_802\"] = 802] = \"NUMBER_802\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_803\"] = 803] = \"NUMBER_803\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_804\"] = 804] = \"NUMBER_804\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_805\"] = 805] = \"NUMBER_805\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_806\"] = 806] = \"NUMBER_806\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_807\"] = 807] = \"NUMBER_807\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_900\"] = 900] = \"NUMBER_900\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_901\"] = 901] = \"NUMBER_901\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_902\"] = 902] = \"NUMBER_902\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_903\"] = 903] = \"NUMBER_903\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_904\"] = 904] = \"NUMBER_904\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_905\"] = 905] = \"NUMBER_905\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_906\"] = 906] = \"NUMBER_906\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_907\"] = 907] = \"NUMBER_907\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_908\"] = 908] = \"NUMBER_908\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_909\"] = 909] = \"NUMBER_909\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1000\"] = 1000] = \"NUMBER_1000\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1001\"] = 1001] = \"NUMBER_1001\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1002\"] = 1002] = \"NUMBER_1002\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1003\"] = 1003] = \"NUMBER_1003\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1004\"] = 1004] = \"NUMBER_1004\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1005\"] = 1005] = \"NUMBER_1005\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1006\"] = 1006] = \"NUMBER_1006\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1007\"] = 1007] = \"NUMBER_1007\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1008\"] = 1008] = \"NUMBER_1008\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1009\"] = 1009] = \"NUMBER_1009\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1100\"] = 1100] = \"NUMBER_1100\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1204\"] = 1204] = \"NUMBER_1204\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1205\"] = 1205] = \"NUMBER_1205\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1218\"] = 1218] = \"NUMBER_1218\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1223\"] = 1223] = \"NUMBER_1223\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1224\"] = 1224] = \"NUMBER_1224\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1225\"] = 1225] = \"NUMBER_1225\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1226\"] = 1226] = \"NUMBER_1226\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1227\"] = 1227] = \"NUMBER_1227\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1229\"] = 1229] = \"NUMBER_1229\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1230\"] = 1230] = \"NUMBER_1230\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1231\"] = 1231] = \"NUMBER_1231\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1232\"] = 1232] = \"NUMBER_1232\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1233\"] = 1233] = \"NUMBER_1233\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1234\"] = 1234] = \"NUMBER_1234\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1235\"] = 1235] = \"NUMBER_1235\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1236\"] = 1236] = \"NUMBER_1236\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1237\"] = 1237] = \"NUMBER_1237\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1238\"] = 1238] = \"NUMBER_1238\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1239\"] = 1239] = \"NUMBER_1239\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1300\"] = 1300] = \"NUMBER_1300\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1301\"] = 1301] = \"NUMBER_1301\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1302\"] = 1302] = \"NUMBER_1302\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1303\"] = 1303] = \"NUMBER_1303\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1304\"] = 1304] = \"NUMBER_1304\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1305\"] = 1305] = \"NUMBER_1305\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1306\"] = 1306] = \"NUMBER_1306\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1307\"] = 1307] = \"NUMBER_1307\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1308\"] = 1308] = \"NUMBER_1308\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1309\"] = 1309] = \"NUMBER_1309\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1310\"] = 1310] = \"NUMBER_1310\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1311\"] = 1311] = \"NUMBER_1311\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1312\"] = 1312] = \"NUMBER_1312\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1313\"] = 1313] = \"NUMBER_1313\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1314\"] = 1314] = \"NUMBER_1314\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1315\"] = 1315] = \"NUMBER_1315\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1316\"] = 1316] = \"NUMBER_1316\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1317\"] = 1317] = \"NUMBER_1317\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1318\"] = 1318] = \"NUMBER_1318\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1400\"] = 1400] = \"NUMBER_1400\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1401\"] = 1401] = \"NUMBER_1401\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1402\"] = 1402] = \"NUMBER_1402\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1403\"] = 1403] = \"NUMBER_1403\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1404\"] = 1404] = \"NUMBER_1404\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1405\"] = 1405] = \"NUMBER_1405\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1500\"] = 1500] = \"NUMBER_1500\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1501\"] = 1501] = \"NUMBER_1501\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1502\"] = 1502] = \"NUMBER_1502\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1600\"] = 1600] = \"NUMBER_1600\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1601\"] = 1601] = \"NUMBER_1601\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1602\"] = 1602] = \"NUMBER_1602\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1603\"] = 1603] = \"NUMBER_1603\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1604\"] = 1604] = \"NUMBER_1604\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1605\"] = 1605] = \"NUMBER_1605\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1606\"] = 1606] = \"NUMBER_1606\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1607\"] = 1607] = \"NUMBER_1607\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1608\"] = 1608] = \"NUMBER_1608\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1609\"] = 1609] = \"NUMBER_1609\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1610\"] = 1610] = \"NUMBER_1610\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1611\"] = 1611] = \"NUMBER_1611\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1612\"] = 1612] = \"NUMBER_1612\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1613\"] = 1613] = \"NUMBER_1613\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1614\"] = 1614] = \"NUMBER_1614\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1615\"] = 1615] = \"NUMBER_1615\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1616\"] = 1616] = \"NUMBER_1616\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1617\"] = 1617] = \"NUMBER_1617\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1618\"] = 1618] = \"NUMBER_1618\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1619\"] = 1619] = \"NUMBER_1619\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1620\"] = 1620] = \"NUMBER_1620\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1621\"] = 1621] = \"NUMBER_1621\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1622\"] = 1622] = \"NUMBER_1622\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1623\"] = 1623] = \"NUMBER_1623\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1624\"] = 1624] = \"NUMBER_1624\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1625\"] = 1625] = \"NUMBER_1625\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1626\"] = 1626] = \"NUMBER_1626\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1627\"] = 1627] = \"NUMBER_1627\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1628\"] = 1628] = \"NUMBER_1628\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1629\"] = 1629] = \"NUMBER_1629\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1630\"] = 1630] = \"NUMBER_1630\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1631\"] = 1631] = \"NUMBER_1631\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1632\"] = 1632] = \"NUMBER_1632\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1633\"] = 1633] = \"NUMBER_1633\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1634\"] = 1634] = \"NUMBER_1634\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1635\"] = 1635] = \"NUMBER_1635\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1636\"] = 1636] = \"NUMBER_1636\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1637\"] = 1637] = \"NUMBER_1637\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1638\"] = 1638] = \"NUMBER_1638\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1639\"] = 1639] = \"NUMBER_1639\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1640\"] = 1640] = \"NUMBER_1640\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1641\"] = 1641] = \"NUMBER_1641\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1642\"] = 1642] = \"NUMBER_1642\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1643\"] = 1643] = \"NUMBER_1643\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1644\"] = 1644] = \"NUMBER_1644\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1645\"] = 1645] = \"NUMBER_1645\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1646\"] = 1646] = \"NUMBER_1646\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1647\"] = 1647] = \"NUMBER_1647\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1648\"] = 1648] = \"NUMBER_1648\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1649\"] = 1649] = \"NUMBER_1649\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1650\"] = 1650] = \"NUMBER_1650\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1651\"] = 1651] = \"NUMBER_1651\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1652\"] = 1652] = \"NUMBER_1652\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1653\"] = 1653] = \"NUMBER_1653\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1654\"] = 1654] = \"NUMBER_1654\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1655\"] = 1655] = \"NUMBER_1655\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1656\"] = 1656] = \"NUMBER_1656\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1657\"] = 1657] = \"NUMBER_1657\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1658\"] = 1658] = \"NUMBER_1658\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1659\"] = 1659] = \"NUMBER_1659\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1660\"] = 1660] = \"NUMBER_1660\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1661\"] = 1661] = \"NUMBER_1661\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1662\"] = 1662] = \"NUMBER_1662\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1663\"] = 1663] = \"NUMBER_1663\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1664\"] = 1664] = \"NUMBER_1664\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1665\"] = 1665] = \"NUMBER_1665\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1666\"] = 1666] = \"NUMBER_1666\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1667\"] = 1667] = \"NUMBER_1667\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1668\"] = 1668] = \"NUMBER_1668\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1669\"] = 1669] = \"NUMBER_1669\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1670\"] = 1670] = \"NUMBER_1670\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1671\"] = 1671] = \"NUMBER_1671\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1672\"] = 1672] = \"NUMBER_1672\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1673\"] = 1673] = \"NUMBER_1673\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1674\"] = 1674] = \"NUMBER_1674\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1675\"] = 1675] = \"NUMBER_1675\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1676\"] = 1676] = \"NUMBER_1676\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1677\"] = 1677] = \"NUMBER_1677\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1678\"] = 1678] = \"NUMBER_1678\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1679\"] = 1679] = \"NUMBER_1679\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1680\"] = 1680] = \"NUMBER_1680\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1681\"] = 1681] = \"NUMBER_1681\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1682\"] = 1682] = \"NUMBER_1682\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1800\"] = 1800] = \"NUMBER_1800\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1801\"] = 1801] = \"NUMBER_1801\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1802\"] = 1802] = \"NUMBER_1802\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1803\"] = 1803] = \"NUMBER_1803\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1804\"] = 1804] = \"NUMBER_1804\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1805\"] = 1805] = \"NUMBER_1805\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1806\"] = 1806] = \"NUMBER_1806\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1900\"] = 1900] = \"NUMBER_1900\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1901\"] = 1901] = \"NUMBER_1901\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1902\"] = 1902] = \"NUMBER_1902\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1903\"] = 1903] = \"NUMBER_1903\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1904\"] = 1904] = \"NUMBER_1904\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1905\"] = 1905] = \"NUMBER_1905\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1906\"] = 1906] = \"NUMBER_1906\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1907\"] = 1907] = \"NUMBER_1907\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1908\"] = 1908] = \"NUMBER_1908\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1910\"] = 1910] = \"NUMBER_1910\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1911\"] = 1911] = \"NUMBER_1911\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1912\"] = 1912] = \"NUMBER_1912\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1913\"] = 1913] = \"NUMBER_1913\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_1914\"] = 1914] = \"NUMBER_1914\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2000\"] = 2000] = \"NUMBER_2000\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2001\"] = 2001] = \"NUMBER_2001\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2002\"] = 2002] = \"NUMBER_2002\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2003\"] = 2003] = \"NUMBER_2003\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2004\"] = 2004] = \"NUMBER_2004\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2005\"] = 2005] = \"NUMBER_2005\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2006\"] = 2006] = \"NUMBER_2006\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2007\"] = 2007] = \"NUMBER_2007\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2008\"] = 2008] = \"NUMBER_2008\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2009\"] = 2009] = \"NUMBER_2009\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2010\"] = 2010] = \"NUMBER_2010\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2011\"] = 2011] = \"NUMBER_2011\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2012\"] = 2012] = \"NUMBER_2012\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2013\"] = 2013] = \"NUMBER_2013\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2014\"] = 2014] = \"NUMBER_2014\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2015\"] = 2015] = \"NUMBER_2015\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2016\"] = 2016] = \"NUMBER_2016\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2017\"] = 2017] = \"NUMBER_2017\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2018\"] = 2018] = \"NUMBER_2018\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2019\"] = 2019] = \"NUMBER_2019\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2020\"] = 2020] = \"NUMBER_2020\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2021\"] = 2021] = \"NUMBER_2021\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2022\"] = 2022] = \"NUMBER_2022\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2023\"] = 2023] = \"NUMBER_2023\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2024\"] = 2024] = \"NUMBER_2024\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2025\"] = 2025] = \"NUMBER_2025\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2026\"] = 2026] = \"NUMBER_2026\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2027\"] = 2027] = \"NUMBER_2027\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2028\"] = 2028] = \"NUMBER_2028\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2029\"] = 2029] = \"NUMBER_2029\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2030\"] = 2030] = \"NUMBER_2030\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2031\"] = 2031] = \"NUMBER_2031\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2032\"] = 2032] = \"NUMBER_2032\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2033\"] = 2033] = \"NUMBER_2033\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2034\"] = 2034] = \"NUMBER_2034\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2035\"] = 2035] = \"NUMBER_2035\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2036\"] = 2036] = \"NUMBER_2036\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2037\"] = 2037] = \"NUMBER_2037\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2038\"] = 2038] = \"NUMBER_2038\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2039\"] = 2039] = \"NUMBER_2039\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2040\"] = 2040] = \"NUMBER_2040\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2041\"] = 2041] = \"NUMBER_2041\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2042\"] = 2042] = \"NUMBER_2042\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2043\"] = 2043] = \"NUMBER_2043\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2044\"] = 2044] = \"NUMBER_2044\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2045\"] = 2045] = \"NUMBER_2045\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2046\"] = 2046] = \"NUMBER_2046\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2047\"] = 2047] = \"NUMBER_2047\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2048\"] = 2048] = \"NUMBER_2048\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2049\"] = 2049] = \"NUMBER_2049\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2050\"] = 2050] = \"NUMBER_2050\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2051\"] = 2051] = \"NUMBER_2051\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2052\"] = 2052] = \"NUMBER_2052\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2053\"] = 2053] = \"NUMBER_2053\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2054\"] = 2054] = \"NUMBER_2054\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2055\"] = 2055] = \"NUMBER_2055\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2056\"] = 2056] = \"NUMBER_2056\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2100\"] = 2100] = \"NUMBER_2100\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2101\"] = 2101] = \"NUMBER_2101\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2102\"] = 2102] = \"NUMBER_2102\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2103\"] = 2103] = \"NUMBER_2103\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2104\"] = 2104] = \"NUMBER_2104\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2105\"] = 2105] = \"NUMBER_2105\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2106\"] = 2106] = \"NUMBER_2106\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2107\"] = 2107] = \"NUMBER_2107\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2108\"] = 2108] = \"NUMBER_2108\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2109\"] = 2109] = \"NUMBER_2109\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2110\"] = 2110] = \"NUMBER_2110\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2111\"] = 2111] = \"NUMBER_2111\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2112\"] = 2112] = \"NUMBER_2112\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2113\"] = 2113] = \"NUMBER_2113\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2114\"] = 2114] = \"NUMBER_2114\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2115\"] = 2115] = \"NUMBER_2115\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2200\"] = 2200] = \"NUMBER_2200\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2201\"] = 2201] = \"NUMBER_2201\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2202\"] = 2202] = \"NUMBER_2202\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2203\"] = 2203] = \"NUMBER_2203\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2204\"] = 2204] = \"NUMBER_2204\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2205\"] = 2205] = \"NUMBER_2205\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2206\"] = 2206] = \"NUMBER_2206\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2207\"] = 2207] = \"NUMBER_2207\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2300\"] = 2300] = \"NUMBER_2300\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2500\"] = 2500] = \"NUMBER_2500\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2501\"] = 2501] = \"NUMBER_2501\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2502\"] = 2502] = \"NUMBER_2502\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2600\"] = 2600] = \"NUMBER_2600\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2601\"] = 2601] = \"NUMBER_2601\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2700\"] = 2700] = \"NUMBER_2700\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2701\"] = 2701] = \"NUMBER_2701\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2702\"] = 2702] = \"NUMBER_2702\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2703\"] = 2703] = \"NUMBER_2703\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2800\"] = 2800] = \"NUMBER_2800\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2801\"] = 2801] = \"NUMBER_2801\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2802\"] = 2802] = \"NUMBER_2802\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2803\"] = 2803] = \"NUMBER_2803\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2804\"] = 2804] = \"NUMBER_2804\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2805\"] = 2805] = \"NUMBER_2805\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_2806\"] = 2806] = \"NUMBER_2806\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3000\"] = 3000] = \"NUMBER_3000\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3001\"] = 3001] = \"NUMBER_3001\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3002\"] = 3002] = \"NUMBER_3002\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3003\"] = 3003] = \"NUMBER_3003\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3004\"] = 3004] = \"NUMBER_3004\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3005\"] = 3005] = \"NUMBER_3005\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3006\"] = 3006] = \"NUMBER_3006\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3007\"] = 3007] = \"NUMBER_3007\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3008\"] = 3008] = \"NUMBER_3008\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3009\"] = 3009] = \"NUMBER_3009\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3010\"] = 3010] = \"NUMBER_3010\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3011\"] = 3011] = \"NUMBER_3011\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3012\"] = 3012] = \"NUMBER_3012\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3013\"] = 3013] = \"NUMBER_3013\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3014\"] = 3014] = \"NUMBER_3014\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3015\"] = 3015] = \"NUMBER_3015\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3016\"] = 3016] = \"NUMBER_3016\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3017\"] = 3017] = \"NUMBER_3017\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3018\"] = 3018] = \"NUMBER_3018\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3019\"] = 3019] = \"NUMBER_3019\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3020\"] = 3020] = \"NUMBER_3020\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3021\"] = 3021] = \"NUMBER_3021\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3022\"] = 3022] = \"NUMBER_3022\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3023\"] = 3023] = \"NUMBER_3023\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3024\"] = 3024] = \"NUMBER_3024\";\n    PlatformErrorCodes[PlatformErrorCodes[\"NUMBER_3025\"] = 3025] = \"NUMBER_3025\";\n})(PlatformErrorCodes = exports.PlatformErrorCodes || (exports.PlatformErrorCodes = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Exceptions/PlatformErrorCodes.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/CommunityContent/SortMode.ts":
+/*!***************************************************!*\
+  !*** ./Bungie/Forum/CommunityContent/SortMode.ts ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar SortMode;\n(function (SortMode) {\n    SortMode[SortMode[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    SortMode[SortMode[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    SortMode[SortMode[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n})(SortMode = exports.SortMode || (exports.SortMode = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/CommunityContent/SortMode.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/CommunityContent/index.ts":
+/*!************************************************!*\
+  !*** ./Bungie/Forum/CommunityContent/index.ts ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./SortMode */ \"./Bungie/Forum/CommunityContent/SortMode.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/CommunityContent/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/FlagsEnum.ts":
+/*!***********************************!*\
+  !*** ./Bungie/Forum/FlagsEnum.ts ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar FlagsEnum;\n(function (FlagsEnum) {\n    FlagsEnum[FlagsEnum[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    FlagsEnum[FlagsEnum[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    FlagsEnum[FlagsEnum[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    FlagsEnum[FlagsEnum[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    FlagsEnum[FlagsEnum[\"NUMBER_8\"] = 8] = \"NUMBER_8\";\n    FlagsEnum[FlagsEnum[\"NUMBER_16\"] = 16] = \"NUMBER_16\";\n    FlagsEnum[FlagsEnum[\"NUMBER_32\"] = 32] = \"NUMBER_32\";\n    FlagsEnum[FlagsEnum[\"NUMBER_64\"] = 64] = \"NUMBER_64\";\n    FlagsEnum[FlagsEnum[\"NUMBER_128\"] = 128] = \"NUMBER_128\";\n})(FlagsEnum = exports.FlagsEnum || (exports.FlagsEnum = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/FlagsEnum.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/MediaType.ts":
+/*!***********************************!*\
+  !*** ./Bungie/Forum/MediaType.ts ***!
+  \***********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar MediaType;\n(function (MediaType) {\n    MediaType[MediaType[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    MediaType[MediaType[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    MediaType[MediaType[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    MediaType[MediaType[\"NUMBER_3\"] = 3] = \"NUMBER_3\";\n})(MediaType = exports.MediaType || (exports.MediaType = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/MediaType.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Post/CategoryEnums.ts":
+/*!********************************************!*\
+  !*** ./Bungie/Forum/Post/CategoryEnums.ts ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar CategoryEnums;\n(function (CategoryEnums) {\n    CategoryEnums[CategoryEnums[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    CategoryEnums[CategoryEnums[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    CategoryEnums[CategoryEnums[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    CategoryEnums[CategoryEnums[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    CategoryEnums[CategoryEnums[\"NUMBER_8\"] = 8] = \"NUMBER_8\";\n    CategoryEnums[CategoryEnums[\"NUMBER_16\"] = 16] = \"NUMBER_16\";\n    CategoryEnums[CategoryEnums[\"NUMBER_32\"] = 32] = \"NUMBER_32\";\n    CategoryEnums[CategoryEnums[\"NUMBER_64\"] = 64] = \"NUMBER_64\";\n    CategoryEnums[CategoryEnums[\"NUMBER_128\"] = 128] = \"NUMBER_128\";\n    CategoryEnums[CategoryEnums[\"NUMBER_256\"] = 256] = \"NUMBER_256\";\n    CategoryEnums[CategoryEnums[\"NUMBER_512\"] = 512] = \"NUMBER_512\";\n    CategoryEnums[CategoryEnums[\"NUMBER_1024\"] = 1024] = \"NUMBER_1024\";\n})(CategoryEnums = exports.CategoryEnums || (exports.CategoryEnums = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Post/CategoryEnums.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Post/Popularity.ts":
+/*!*****************************************!*\
+  !*** ./Bungie/Forum/Post/Popularity.ts ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar Popularity;\n(function (Popularity) {\n    Popularity[Popularity[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    Popularity[Popularity[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    Popularity[Popularity[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    Popularity[Popularity[\"NUMBER_3\"] = 3] = \"NUMBER_3\";\n    Popularity[Popularity[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    Popularity[Popularity[\"NUMBER_5\"] = 5] = \"NUMBER_5\";\n})(Popularity = exports.Popularity || (exports.Popularity = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Post/Popularity.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Post/SortEnum.ts":
+/*!***************************************!*\
+  !*** ./Bungie/Forum/Post/SortEnum.ts ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar SortEnum;\n(function (SortEnum) {\n    SortEnum[SortEnum[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    SortEnum[SortEnum[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n})(SortEnum = exports.SortEnum || (exports.SortEnum = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Post/SortEnum.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Post/index.ts":
+/*!************************************!*\
+  !*** ./Bungie/Forum/Post/index.ts ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./CategoryEnums */ \"./Bungie/Forum/Post/CategoryEnums.ts\"));\n__export(__webpack_require__(/*! ./Popularity */ \"./Bungie/Forum/Post/Popularity.ts\"));\n__export(__webpack_require__(/*! ./SortEnum */ \"./Bungie/Forum/Post/SortEnum.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Post/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Recruitment/IntensityLabel.ts":
+/*!****************************************************!*\
+  !*** ./Bungie/Forum/Recruitment/IntensityLabel.ts ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar IntensityLabel;\n(function (IntensityLabel) {\n    IntensityLabel[IntensityLabel[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    IntensityLabel[IntensityLabel[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    IntensityLabel[IntensityLabel[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n})(IntensityLabel = exports.IntensityLabel || (exports.IntensityLabel = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Recruitment/IntensityLabel.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Recruitment/ToneLabel.ts":
+/*!***********************************************!*\
+  !*** ./Bungie/Forum/Recruitment/ToneLabel.ts ***!
+  \***********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar ToneLabel;\n(function (ToneLabel) {\n    ToneLabel[ToneLabel[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    ToneLabel[ToneLabel[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    ToneLabel[ToneLabel[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n})(ToneLabel = exports.ToneLabel || (exports.ToneLabel = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Recruitment/ToneLabel.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Recruitment/index.ts":
+/*!*******************************************!*\
+  !*** ./Bungie/Forum/Recruitment/index.ts ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./IntensityLabel */ \"./Bungie/Forum/Recruitment/IntensityLabel.ts\"));\n__export(__webpack_require__(/*! ./ToneLabel */ \"./Bungie/Forum/Recruitment/ToneLabel.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Recruitment/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Topics/CategoryFiltersEnum.ts":
+/*!****************************************************!*\
+  !*** ./Bungie/Forum/Topics/CategoryFiltersEnum.ts ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar CategoryFiltersEnum;\n(function (CategoryFiltersEnum) {\n    CategoryFiltersEnum[CategoryFiltersEnum[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    CategoryFiltersEnum[CategoryFiltersEnum[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    CategoryFiltersEnum[CategoryFiltersEnum[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    CategoryFiltersEnum[CategoryFiltersEnum[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    CategoryFiltersEnum[CategoryFiltersEnum[\"NUMBER_8\"] = 8] = \"NUMBER_8\";\n    CategoryFiltersEnum[CategoryFiltersEnum[\"NUMBER_16\"] = 16] = \"NUMBER_16\";\n    CategoryFiltersEnum[CategoryFiltersEnum[\"NUMBER_32\"] = 32] = \"NUMBER_32\";\n    CategoryFiltersEnum[CategoryFiltersEnum[\"NUMBER_64\"] = 64] = \"NUMBER_64\";\n    CategoryFiltersEnum[CategoryFiltersEnum[\"NUMBER_128\"] = 128] = \"NUMBER_128\";\n})(CategoryFiltersEnum = exports.CategoryFiltersEnum || (exports.CategoryFiltersEnum = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Topics/CategoryFiltersEnum.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Topics/QuickDateEnum.ts":
+/*!**********************************************!*\
+  !*** ./Bungie/Forum/Topics/QuickDateEnum.ts ***!
+  \**********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar QuickDateEnum;\n(function (QuickDateEnum) {\n    QuickDateEnum[QuickDateEnum[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    QuickDateEnum[QuickDateEnum[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    QuickDateEnum[QuickDateEnum[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    QuickDateEnum[QuickDateEnum[\"NUMBER_3\"] = 3] = \"NUMBER_3\";\n    QuickDateEnum[QuickDateEnum[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n})(QuickDateEnum = exports.QuickDateEnum || (exports.QuickDateEnum = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Topics/QuickDateEnum.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Topics/SortEnum.ts":
+/*!*****************************************!*\
+  !*** ./Bungie/Forum/Topics/SortEnum.ts ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar SortEnum;\n(function (SortEnum) {\n    SortEnum[SortEnum[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    SortEnum[SortEnum[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    SortEnum[SortEnum[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    SortEnum[SortEnum[\"NUMBER_3\"] = 3] = \"NUMBER_3\";\n    SortEnum[SortEnum[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    SortEnum[SortEnum[\"NUMBER_5\"] = 5] = \"NUMBER_5\";\n    SortEnum[SortEnum[\"NUMBER_6\"] = 6] = \"NUMBER_6\";\n    SortEnum[SortEnum[\"NUMBER_7\"] = 7] = \"NUMBER_7\";\n})(SortEnum = exports.SortEnum || (exports.SortEnum = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Topics/SortEnum.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/Topics/index.ts":
+/*!**************************************!*\
+  !*** ./Bungie/Forum/Topics/index.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./CategoryFiltersEnum */ \"./Bungie/Forum/Topics/CategoryFiltersEnum.ts\"));\n__export(__webpack_require__(/*! ./QuickDateEnum */ \"./Bungie/Forum/Topics/QuickDateEnum.ts\"));\nvar SortEnum_1 = __webpack_require__(/*! ./SortEnum */ \"./Bungie/Forum/Topics/SortEnum.ts\");\nexports.TopicsSortEnum = SortEnum_1.SortEnum;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/Topics/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Forum/index.ts":
+/*!*******************************!*\
+  !*** ./Bungie/Forum/index.ts ***!
+  \*******************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./FlagsEnum */ \"./Bungie/Forum/FlagsEnum.ts\"));\n__export(__webpack_require__(/*! ./MediaType */ \"./Bungie/Forum/MediaType.ts\"));\n__export(__webpack_require__(/*! ./CommunityContent */ \"./Bungie/Forum/CommunityContent/index.ts\"));\n__export(__webpack_require__(/*! ./Recruitment */ \"./Bungie/Forum/Recruitment/index.ts\"));\n__export(__webpack_require__(/*! ./Post */ \"./Bungie/Forum/Post/index.ts\"));\n__export(__webpack_require__(/*! ./Topics */ \"./Bungie/Forum/Topics/index.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Forum/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Global/AlertLevel.ts":
+/*!*************************************!*\
+  !*** ./Bungie/Global/AlertLevel.ts ***!
+  \*************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar AlertLevel;\n(function (AlertLevel) {\n    AlertLevel[AlertLevel[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    AlertLevel[AlertLevel[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    AlertLevel[AlertLevel[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    AlertLevel[AlertLevel[\"NUMBER_3\"] = 3] = \"NUMBER_3\";\n})(AlertLevel = exports.AlertLevel || (exports.AlertLevel = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Global/AlertLevel.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Global/AlertType.ts":
+/*!************************************!*\
+  !*** ./Bungie/Global/AlertType.ts ***!
+  \************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar AlertType;\n(function (AlertType) {\n    AlertType[AlertType[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    AlertType[AlertType[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n})(AlertType = exports.AlertType || (exports.AlertType = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Global/AlertType.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Global/index.ts":
+/*!********************************!*\
+  !*** ./Bungie/Global/index.ts ***!
+  \********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./AlertLevel */ \"./Bungie/Global/AlertLevel.ts\"));\n__export(__webpack_require__(/*! ./AlertType */ \"./Bungie/Global/AlertType.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Global/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Capabilities.ts":
+/*!*****************************************!*\
+  !*** ./Bungie/GroupsV2/Capabilities.ts ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar Capabilities;\n(function (Capabilities) {\n    Capabilities[Capabilities[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    Capabilities[Capabilities[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    Capabilities[Capabilities[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    Capabilities[Capabilities[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    Capabilities[Capabilities[\"NUMBER_8\"] = 8] = \"NUMBER_8\";\n    Capabilities[Capabilities[\"NUMBER_16\"] = 16] = \"NUMBER_16\";\n    Capabilities[Capabilities[\"NUMBER_32\"] = 32] = \"NUMBER_32\";\n    Capabilities[Capabilities[\"NUMBER_64\"] = 64] = \"NUMBER_64\";\n})(Capabilities = exports.Capabilities || (exports.Capabilities = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Capabilities.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/ChatSecuritySetting.ts":
+/*!************************************************!*\
+  !*** ./Bungie/GroupsV2/ChatSecuritySetting.ts ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar ChatSecuritySetting;\n(function (ChatSecuritySetting) {\n    ChatSecuritySetting[ChatSecuritySetting[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    ChatSecuritySetting[ChatSecuritySetting[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n})(ChatSecuritySetting = exports.ChatSecuritySetting || (exports.ChatSecuritySetting = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/ChatSecuritySetting.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/AllianceStatus.ts":
+/*!*************************************************!*\
+  !*** ./Bungie/GroupsV2/Group/AllianceStatus.ts ***!
+  \*************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.GroupsV2GroupAllianceStatus = {\n    NUMBER_0: 0,\n    NUMBER_1: 1,\n    NUMBER_2: 2\n};\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/AllianceStatus.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/ApplicationResolveState.ts":
+/*!**********************************************************!*\
+  !*** ./Bungie/GroupsV2/Group/ApplicationResolveState.ts ***!
+  \**********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.GroupsV2GroupApplicationResolveState = {\n    NUMBER_0: 0,\n    NUMBER_1: 1,\n    NUMBER_2: 2,\n    NUMBER_3: 3\n};\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/ApplicationResolveState.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/DateRange.ts":
+/*!********************************************!*\
+  !*** ./Bungie/GroupsV2/Group/DateRange.ts ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.GroupsV2GroupDateRange = {\n    NUMBER_0: 0,\n    NUMBER_1: 1,\n    NUMBER_2: 2,\n    NUMBER_3: 3,\n    NUMBER_4: 4\n};\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/DateRange.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/EditAction.ts":
+/*!*********************************************!*\
+  !*** ./Bungie/GroupsV2/Group/EditAction.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar GroupsV2GroupEditAction;\n(function (GroupsV2GroupEditAction) {\n    GroupsV2GroupEditAction.MembershipOptionEnum = {\n        NUMBER_0: 0,\n        NUMBER_1: 1,\n        NUMBER_2: 2\n    };\n    GroupsV2GroupEditAction.ChatSecurityEnum = {\n        NUMBER_0: 0,\n        NUMBER_1: 1\n    };\n    GroupsV2GroupEditAction.HomepageEnum = {\n        NUMBER_0: 0,\n        NUMBER_1: 1,\n        NUMBER_2: 2\n    };\n    GroupsV2GroupEditAction.DefaultPublicityEnum = {\n        NUMBER_0: 0,\n        NUMBER_1: 1,\n        NUMBER_2: 2\n    };\n})(GroupsV2GroupEditAction = exports.GroupsV2GroupEditAction || (exports.GroupsV2GroupEditAction = {}));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/EditAction.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/GroupType.ts":
+/*!********************************************!*\
+  !*** ./Bungie/GroupsV2/Group/GroupType.ts ***!
+  \********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar GroupType;\n(function (GroupType) {\n    GroupType[GroupType[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    GroupType[GroupType[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n})(GroupType = exports.GroupType || (exports.GroupType = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/GroupType.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/Homepage.ts":
+/*!*******************************************!*\
+  !*** ./Bungie/GroupsV2/Group/Homepage.ts ***!
+  \*******************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.GroupsV2GroupHomepage = {\n    NUMBER_0: 0,\n    NUMBER_1: 1,\n    NUMBER_2: 2\n};\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/Homepage.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/MemberCountFilter.ts":
+/*!****************************************************!*\
+  !*** ./Bungie/GroupsV2/Group/MemberCountFilter.ts ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.GroupsV2GroupMemberCountFilter = {\n    NUMBER_0: 0,\n    NUMBER_1: 1,\n    NUMBER_2: 2,\n    NUMBER_3: 3\n};\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/MemberCountFilter.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/OptionalConversationEditRequest.ts":
+/*!******************************************************************!*\
+  !*** ./Bungie/GroupsV2/Group/OptionalConversationEditRequest.ts ***!
+  \******************************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar GroupsV2GroupOptionalConversationEditRequest;\n(function (GroupsV2GroupOptionalConversationEditRequest) {\n    GroupsV2GroupOptionalConversationEditRequest.ChatSecurityEnum = {\n        NUMBER_0: 0,\n        NUMBER_1: 1\n    };\n})(GroupsV2GroupOptionalConversationEditRequest = exports.GroupsV2GroupOptionalConversationEditRequest || (exports.GroupsV2GroupOptionalConversationEditRequest = {}));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/OptionalConversationEditRequest.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/OptionsEditAction.ts":
+/*!****************************************************!*\
+  !*** ./Bungie/GroupsV2/Group/OptionsEditAction.ts ***!
+  \****************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar GroupsV2GroupOptionsEditAction;\n(function (GroupsV2GroupOptionsEditAction) {\n    GroupsV2GroupOptionsEditAction.HostGuidedGamePermissionOverrideEnum = {\n        NUMBER_0: 0,\n        NUMBER_1: 1,\n        NUMBER_2: 2\n    };\n    GroupsV2GroupOptionsEditAction.JoinLevelEnum = {\n        NUMBER_0: 0,\n        NUMBER_1: 1,\n        NUMBER_2: 2,\n        NUMBER_3: 3,\n        NUMBER_4: 4,\n        NUMBER_5: 5\n    };\n})(GroupsV2GroupOptionsEditAction = exports.GroupsV2GroupOptionsEditAction || (exports.GroupsV2GroupOptionsEditAction = {}));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/OptionsEditAction.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/PostPublicity.ts":
+/*!************************************************!*\
+  !*** ./Bungie/GroupsV2/Group/PostPublicity.ts ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.GroupsV2GroupPostPublicity = {\n    NUMBER_0: 0,\n    NUMBER_1: 1,\n    NUMBER_2: 2\n};\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/PostPublicity.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/PotentialMemberStatus.ts":
+/*!********************************************************!*\
+  !*** ./Bungie/GroupsV2/Group/PotentialMemberStatus.ts ***!
+  \********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.GroupsV2GroupPotentialMemberStatus = {\n    NUMBER_0: 0,\n    NUMBER_1: 1,\n    NUMBER_2: 2\n};\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/PotentialMemberStatus.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/Query.ts":
+/*!****************************************!*\
+  !*** ./Bungie/GroupsV2/Group/Query.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar GroupsV2GroupQuery;\n(function (GroupsV2GroupQuery) {\n    GroupsV2GroupQuery.GroupMemberCountFilterEnum = {\n        NUMBER_0: 0,\n        NUMBER_1: 1,\n        NUMBER_2: 2,\n        NUMBER_3: 3\n    };\n})(GroupsV2GroupQuery = exports.GroupsV2GroupQuery || (exports.GroupsV2GroupQuery = {}));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/Query.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/SortBy.ts":
+/*!*****************************************!*\
+  !*** ./Bungie/GroupsV2/Group/SortBy.ts ***!
+  \*****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.GroupsV2GroupSortBy = {\n    NUMBER_0: 0,\n    NUMBER_1: 1,\n    NUMBER_2: 2,\n    NUMBER_3: 3\n};\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/SortBy.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/index.ts":
+/*!****************************************!*\
+  !*** ./Bungie/GroupsV2/Group/index.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./AllianceStatus */ \"./Bungie/GroupsV2/Group/AllianceStatus.ts\"));\n__export(__webpack_require__(/*! ./ApplicationResolveState */ \"./Bungie/GroupsV2/Group/ApplicationResolveState.ts\"));\n__export(__webpack_require__(/*! ./DateRange */ \"./Bungie/GroupsV2/Group/DateRange.ts\"));\n__export(__webpack_require__(/*! ./EditAction */ \"./Bungie/GroupsV2/Group/EditAction.ts\"));\n__export(__webpack_require__(/*! ./Homepage */ \"./Bungie/GroupsV2/Group/Homepage.ts\"));\n__export(__webpack_require__(/*! ./MemberCountFilter */ \"./Bungie/GroupsV2/Group/MemberCountFilter.ts\"));\n__export(__webpack_require__(/*! ./OptionalConversationEditRequest */ \"./Bungie/GroupsV2/Group/OptionalConversationEditRequest.ts\"));\n__export(__webpack_require__(/*! ./OptionsEditAction */ \"./Bungie/GroupsV2/Group/OptionsEditAction.ts\"));\n__export(__webpack_require__(/*! ./PostPublicity */ \"./Bungie/GroupsV2/Group/PostPublicity.ts\"));\n__export(__webpack_require__(/*! ./PotentialMemberStatus */ \"./Bungie/GroupsV2/Group/PotentialMemberStatus.ts\"));\n__export(__webpack_require__(/*! ./Query */ \"./Bungie/GroupsV2/Group/Query.ts\"));\n__export(__webpack_require__(/*! ./sForMemberFilter */ \"./Bungie/GroupsV2/Group/sForMemberFilter.ts\"));\n__export(__webpack_require__(/*! ./SortBy */ \"./Bungie/GroupsV2/Group/SortBy.ts\"));\n__export(__webpack_require__(/*! ./GroupType */ \"./Bungie/GroupsV2/Group/GroupType.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/Group/sForMemberFilter.ts":
+/*!***************************************************!*\
+  !*** ./Bungie/GroupsV2/Group/sForMemberFilter.ts ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n *\n * NOTE: This class is auto generated by OpenAPI Generator (https://openapi-generator.tech).\n * https://openapi-generator.tech\n * Do not edit the class manually.\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nexports.GroupsV2GroupsForMemberFilter = {\n    NUMBER_0: 0,\n    NUMBER_1: 1,\n    NUMBER_2: 2\n};\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/Group/sForMemberFilter.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/HostGuidedGamesPermissionLevel.ts":
+/*!***********************************************************!*\
+  !*** ./Bungie/GroupsV2/HostGuidedGamesPermissionLevel.ts ***!
+  \***********************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n/**\n * Used for setting the guided game permission level override (admins and founders can always host guided games).\n */\nvar HostGuidedGamesPermissionLevel;\n(function (HostGuidedGamesPermissionLevel) {\n    HostGuidedGamesPermissionLevel[HostGuidedGamesPermissionLevel[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    HostGuidedGamesPermissionLevel[HostGuidedGamesPermissionLevel[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    HostGuidedGamesPermissionLevel[HostGuidedGamesPermissionLevel[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n})(HostGuidedGamesPermissionLevel = exports.HostGuidedGamesPermissionLevel || (exports.HostGuidedGamesPermissionLevel = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/HostGuidedGamesPermissionLevel.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/MembershipOption.ts":
+/*!*********************************************!*\
+  !*** ./Bungie/GroupsV2/MembershipOption.ts ***!
+  \*********************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar MembershipOption;\n(function (MembershipOption) {\n    MembershipOption[MembershipOption[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    MembershipOption[MembershipOption[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    MembershipOption[MembershipOption[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n})(MembershipOption = exports.MembershipOption || (exports.MembershipOption = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/MembershipOption.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/RuntimeGroupMemberType.ts":
+/*!***************************************************!*\
+  !*** ./Bungie/GroupsV2/RuntimeGroupMemberType.ts ***!
+  \***************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar RuntimeGroupMemberType;\n(function (RuntimeGroupMemberType) {\n    RuntimeGroupMemberType[RuntimeGroupMemberType[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    RuntimeGroupMemberType[RuntimeGroupMemberType[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    RuntimeGroupMemberType[RuntimeGroupMemberType[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    RuntimeGroupMemberType[RuntimeGroupMemberType[\"NUMBER_3\"] = 3] = \"NUMBER_3\";\n    RuntimeGroupMemberType[RuntimeGroupMemberType[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    RuntimeGroupMemberType[RuntimeGroupMemberType[\"NUMBER_5\"] = 5] = \"NUMBER_5\";\n})(RuntimeGroupMemberType = exports.RuntimeGroupMemberType || (exports.RuntimeGroupMemberType = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/RuntimeGroupMemberType.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/GroupsV2/index.ts":
+/*!**********************************!*\
+  !*** ./Bungie/GroupsV2/index.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./Group */ \"./Bungie/GroupsV2/Group/index.ts\"));\n__export(__webpack_require__(/*! ./Capabilities */ \"./Bungie/GroupsV2/Capabilities.ts\"));\n__export(__webpack_require__(/*! ./ChatSecuritySetting */ \"./Bungie/GroupsV2/ChatSecuritySetting.ts\"));\n__export(__webpack_require__(/*! ./HostGuidedGamesPermissionLevel */ \"./Bungie/GroupsV2/HostGuidedGamesPermissionLevel.ts\"));\n__export(__webpack_require__(/*! ./MembershipOption */ \"./Bungie/GroupsV2/MembershipOption.ts\"));\n__export(__webpack_require__(/*! ./RuntimeGroupMemberType */ \"./Bungie/GroupsV2/RuntimeGroupMemberType.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/GroupsV2/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Ignores/IgnoreLength.ts":
+/*!****************************************!*\
+  !*** ./Bungie/Ignores/IgnoreLength.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar IgnoreLength;\n(function (IgnoreLength) {\n    IgnoreLength[IgnoreLength[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    IgnoreLength[IgnoreLength[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    IgnoreLength[IgnoreLength[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    IgnoreLength[IgnoreLength[\"NUMBER_3\"] = 3] = \"NUMBER_3\";\n    IgnoreLength[IgnoreLength[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    IgnoreLength[IgnoreLength[\"NUMBER_5\"] = 5] = \"NUMBER_5\";\n    IgnoreLength[IgnoreLength[\"NUMBER_6\"] = 6] = \"NUMBER_6\";\n    IgnoreLength[IgnoreLength[\"NUMBER_7\"] = 7] = \"NUMBER_7\";\n    IgnoreLength[IgnoreLength[\"NUMBER_8\"] = 8] = \"NUMBER_8\";\n    IgnoreLength[IgnoreLength[\"NUMBER_9\"] = 9] = \"NUMBER_9\";\n    IgnoreLength[IgnoreLength[\"NUMBER_10\"] = 10] = \"NUMBER_10\";\n    IgnoreLength[IgnoreLength[\"NUMBER_11\"] = 11] = \"NUMBER_11\";\n})(IgnoreLength = exports.IgnoreLength || (exports.IgnoreLength = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Ignores/IgnoreLength.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Ignores/IgnoreStatus.ts":
+/*!****************************************!*\
+  !*** ./Bungie/Ignores/IgnoreStatus.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\n/**\n * Bungie.Net API\n * These endpoints constitute the functionality exposed by Bungie.net, both for more traditional website functionality and for connectivity to Bungie video games and their related functionality.\n *\n * OpenAPI spec version: 2.3.3\n * Contact: support@bungie.com\n */\nObject.defineProperty(exports, \"__esModule\", { value: true });\nvar IgnoreStatus;\n(function (IgnoreStatus) {\n    IgnoreStatus[IgnoreStatus[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    IgnoreStatus[IgnoreStatus[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    IgnoreStatus[IgnoreStatus[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    IgnoreStatus[IgnoreStatus[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    IgnoreStatus[IgnoreStatus[\"NUMBER_8\"] = 8] = \"NUMBER_8\";\n    IgnoreStatus[IgnoreStatus[\"NUMBER_16\"] = 16] = \"NUMBER_16\";\n    IgnoreStatus[IgnoreStatus[\"NUMBER_32\"] = 32] = \"NUMBER_32\";\n})(IgnoreStatus = exports.IgnoreStatus || (exports.IgnoreStatus = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Ignores/IgnoreStatus.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Ignores/index.ts":
+/*!*********************************!*\
+  !*** ./Bungie/Ignores/index.ts ***!
+  \*********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./IgnoreLength */ \"./Bungie/Ignores/IgnoreLength.ts\"));\n__export(__webpack_require__(/*! ./IgnoreStatus */ \"./Bungie/Ignores/IgnoreStatus.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Ignores/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/MembershipType.ts":
+/*!**********************************!*\
+  !*** ./Bungie/MembershipType.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n/**\n * The types of membership the Accounts system supports. This is the external facing enum used in place of the internal-only Bungie.SharedDefinitions.MembershipType.\n */\nvar MembershipType;\n(function (MembershipType) {\n    MembershipType[MembershipType[\"None\"] = 0] = \"None\";\n    MembershipType[MembershipType[\"Xbox\"] = 1] = \"Xbox\";\n    MembershipType[MembershipType[\"Psn\"] = 2] = \"Psn\";\n    MembershipType[MembershipType[\"Blizzard\"] = 4] = \"Blizzard\";\n    MembershipType[MembershipType[\"Demon\"] = 10] = \"Demon\";\n    MembershipType[MembershipType[\"BungieNext\"] = 254] = \"BungieNext\";\n    MembershipType[MembershipType[\"All\"] = -1] = \"All\";\n})(MembershipType = exports.MembershipType || (exports.MembershipType = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/MembershipType.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Partnerships/PartnershipType.ts":
+/*!************************************************!*\
+  !*** ./Bungie/Partnerships/PartnershipType.ts ***!
+  \************************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n/**\n * Representing external partners to which BNet users can link accounts, but that are not Account System credentials: partnerships that BNet uses exclusively for data.\n */\nvar PartnershipType;\n(function (PartnershipType) {\n    PartnershipType[PartnershipType[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    PartnershipType[PartnershipType[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n})(PartnershipType = exports.PartnershipType || (exports.PartnershipType = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Partnerships/PartnershipType.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Partnerships/index.ts":
+/*!**************************************!*\
+  !*** ./Bungie/Partnerships/index.ts ***!
+  \**************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./PartnershipType */ \"./Bungie/Partnerships/PartnershipType.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Partnerships/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Trending/Entry/Type.ts":
+/*!***************************************!*\
+  !*** ./Bungie/Trending/Entry/Type.ts ***!
+  \***************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nObject.defineProperty(exports, \"__esModule\", { value: true });\n/**\n * The known entity types that you can have returned from Trending.\n */\nvar Type;\n(function (Type) {\n    Type[Type[\"NUMBER_0\"] = 0] = \"NUMBER_0\";\n    Type[Type[\"NUMBER_1\"] = 1] = \"NUMBER_1\";\n    Type[Type[\"NUMBER_2\"] = 2] = \"NUMBER_2\";\n    Type[Type[\"NUMBER_3\"] = 3] = \"NUMBER_3\";\n    Type[Type[\"NUMBER_4\"] = 4] = \"NUMBER_4\";\n    Type[Type[\"NUMBER_5\"] = 5] = \"NUMBER_5\";\n    Type[Type[\"NUMBER_6\"] = 6] = \"NUMBER_6\";\n    Type[Type[\"NUMBER_7\"] = 7] = \"NUMBER_7\";\n    Type[Type[\"NUMBER_8\"] = 8] = \"NUMBER_8\";\n    Type[Type[\"NUMBER_9\"] = 9] = \"NUMBER_9\";\n    Type[Type[\"NUMBER_10\"] = 10] = \"NUMBER_10\";\n    Type[Type[\"NUMBER_11\"] = 11] = \"NUMBER_11\";\n})(Type = exports.Type || (exports.Type = {}));\n;\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Trending/Entry/Type.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Trending/Entry/index.ts":
+/*!****************************************!*\
+  !*** ./Bungie/Trending/Entry/index.ts ***!
+  \****************************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./Type */ \"./Bungie/Trending/Entry/Type.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Trending/Entry/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/Trending/index.ts":
+/*!**********************************!*\
+  !*** ./Bungie/Trending/index.ts ***!
+  \**********************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./Entry */ \"./Bungie/Trending/Entry/index.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/Trending/index.ts?");
+
+/***/ }),
+
+/***/ "./Bungie/index.ts":
+/*!*************************!*\
+  !*** ./Bungie/index.ts ***!
+  \*************************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./Applications */ \"./Bungie/Applications/index.ts\"));\n__export(__webpack_require__(/*! ./Community */ \"./Bungie/Community/index.ts\"));\n__export(__webpack_require__(/*! ./Components */ \"./Bungie/Components/index.ts\"));\n__export(__webpack_require__(/*! ./Content */ \"./Bungie/Content/index.ts\"));\n__export(__webpack_require__(/*! ./Forum */ \"./Bungie/Forum/index.ts\"));\n__export(__webpack_require__(/*! ./Global */ \"./Bungie/Global/index.ts\"));\n__export(__webpack_require__(/*! ./GroupsV2 */ \"./Bungie/GroupsV2/index.ts\"));\n__export(__webpack_require__(/*! ./Ignores */ \"./Bungie/Ignores/index.ts\"));\n__export(__webpack_require__(/*! ./Partnerships */ \"./Bungie/Partnerships/index.ts\"));\n__export(__webpack_require__(/*! ./Trending */ \"./Bungie/Trending/index.ts\"));\n__export(__webpack_require__(/*! ./MembershipType */ \"./Bungie/MembershipType.ts\"));\n__export(__webpack_require__(/*! ./Exceptions/PlatformErrorCodes */ \"./Bungie/Exceptions/PlatformErrorCodes.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./Bungie/index.ts?");
+
+/***/ }),
+
+/***/ "./index.ts":
+/*!******************!*\
+  !*** ./index.ts ***!
+  \******************/
+/*! no static exports found */
+/***/ (function(module, exports, __webpack_require__) {
+
+"use strict";
+eval("\nfunction __export(m) {\n    for (var p in m) if (!exports.hasOwnProperty(p)) exports[p] = m[p];\n}\nObject.defineProperty(exports, \"__esModule\", { value: true });\n__export(__webpack_require__(/*! ./Bungie */ \"./Bungie/index.ts\"));\n\n\n//# sourceURL=webpack://tsBungieApiModels/./index.ts?");
+
+/***/ })
+
+/******/ });
+});

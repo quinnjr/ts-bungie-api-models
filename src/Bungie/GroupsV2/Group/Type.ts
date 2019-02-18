@@ -1,4 +1,0 @@
-export enum Type {
-  NUMBER_0 = 0,
-  NUMBER_1 = 1
-};
